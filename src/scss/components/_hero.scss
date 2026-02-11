@@ -1,0 +1,112 @@
+.hero-wrapper {
+    .hero-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.hero-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 28rem;
+}
+
+.btn-hero-cta {
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.btn-hero-plus {
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.trusted-by {
+    .trusted-logo {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+    }
+}
+
+.manage-cards-card {
+    background: #fff;
+}
+
+.manage-cards-title {
+    font-size: 1.125rem;
+}
+
+.credit-card-preview {
+    background: linear-gradient(135deg, #3d2c6b 0%, #2a1f4a 50%, #1e1638 100%);
+    background-size: 100% 100%;
+    position: relative;
+    min-height: 180px;
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 3px,
+            rgba(255, 255, 255, 0.03) 3px,
+            rgba(255, 255, 255, 0.03) 4px
+        );
+        border-radius: inherit;
+        pointer-events: none;
+    }
+}
+
+.credit-card-brand {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+.credit-card-number {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+}
+
+.transaction-item {
+    &:last-of-type {
+        border-bottom: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-left {
+        margin-bottom: 0.5rem;
+    }
+
+    .trusted-by {
+        margin-top: 2rem !important;
+        padding-top: 2rem !important;
+    }
+
+    .manage-cards-card {
+        max-width: 100%;
+    }
+}

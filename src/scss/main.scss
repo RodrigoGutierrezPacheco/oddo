@@ -1,9 +1,12 @@
+@use "sass:color";
+
 $primary-color: #0087FF;
 $secondary-color: #6c757d;
 $success-color: #198754;
 $font-family-base: 'Montserrat', sans-serif;
 
-@import "./components/navbar";
+@use "./components/navbar";
+@use "./components/hero";
 
 html {
     font-family: $font-family-base;
@@ -65,7 +68,7 @@ main.layout-margin {
     transition: background-color 0.3s ease;
     
     &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: color.adjust($primary-color, $lightness: -10%);
     }
 }
 
