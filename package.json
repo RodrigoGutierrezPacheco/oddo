@@ -1,0 +1,31 @@
+{
+  "name": "odoo-app",
+  "version": "1.0.0",
+  "description": "Aplicación web con HTML, CSS, SCSS, Bootstrap y live reload",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:scss": "sass --watch src/scss:dist/css --style expanded --load-path=src/scss",
+    "dev:server": "browser-sync start --server --files \"**/*.html, dist/css/*.css, src/js/**/*.js, assets/**/*\" --no-notify --no-open",
+    "build": "sass src/scss:dist/css --style compressed --load-path=src/scss",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "bootstrap",
+    "live-reload"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
+

@@ -1,0 +1,279 @@
+$navbar-xs: 480px;   
+$navbar-sm: 576px;   
+$navbar-md: 768px;   
+$navbar-lg: 992px;   
+$navbar-xl: 1200px;  
+
+.navbar,
+.navbar.bg-primary,
+.navbar.navbar-dark {
+    background-color: #0087FF !important;
+    min-height: 64px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 2rem;
+}
+
+.navbar-inner {
+    flex-wrap: wrap;
+}
+
+.navbar-first-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand-logo {
+    height: 1.5rem;
+    width: 70%;
+    max-width: 100px;
+    object-fit: contain;
+    transition: height 0.3s ease, max-width 0.3s ease;
+}
+
+.navbar .nav-link {
+    transition: font-size 0.25s ease, padding 0.25s ease;
+}
+
+.navbar-border {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #4DA1FE;
+    margin-top: 1.5rem;
+    flex-shrink: 0;
+}
+
+$hover-underline-width: 4.5rem;
+
+.navbar .hover-effect {
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition: width 0.25s ease;
+        transform: translateX(-50%);
+    }
+    &:hover::after {
+        width: $hover-underline-width;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: #{$navbar-sm - 0.02}) {
+    .navbar {
+        min-height: 62px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .navbar-first-row {
+        justify-content: space-between;
+    }
+    .navbar-brand-logo {
+        height: 1.6rem;
+        max-width: 95px;
+    }
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.55rem 0.8rem;
+        font-size: 0.95rem;
+    }
+    .navbar-actions {
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 0.75rem;
+        margin-top: 0.25rem;
+    }
+    .navbar-actions .btn-buy-now {
+        min-width: 140px;
+        width: 180px;
+        max-width: 100%;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: #{$navbar-xs - 0.02}) {
+    .navbar-brand-logo {
+        max-width: 85px;
+    }
+    .navbar-actions .btn-buy-now {
+        min-width: 120px;
+        width: 160px;
+        height: 36px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: $navbar-sm) and (max-width: #{$navbar-lg - 0.02}) {
+    .navbar {
+        min-height: 68px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .navbar-first-row {
+        justify-content: space-between;
+    }
+    .navbar-brand-logo {
+        height: 1.7rem;
+        max-width: 100px;
+    }
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.6rem 1rem;
+    }
+    .navbar-actions {
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 0.75rem;
+        margin-top: 0.25rem;
+    }
+    .navbar-actions .btn-buy-now {
+        min-width: 140px;
+        width: 180px;
+        max-width: 200px;
+    }
+}
+
+@media (min-width: $navbar-lg) {
+    .navbar {
+        min-height: 100px;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .navbar .container.layout-margin.navbar-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .navbar-first-row {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .navbar-collapse {
+        flex-basis: auto !important;
+    }
+
+    .navbar-brand-logo {
+        height: 2rem;
+        max-width: 120px;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        flex-direction: row !important;
+        flex: 1 1 auto;
+        min-width: 0;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-nav-center {
+        flex: 1 1 auto;
+        min-width: 0;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .navbar-nav.flex-lg-row {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .navbar-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        align-items: center;
+        border-top: none !important;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        flex-shrink: 0;
+        gap: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .navbar-sign-in {
+        white-space: nowrap;
+    }
+
+    .navbar-actions .btn-buy-now {
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: $navbar-xl) {
+    .navbar-brand-logo {
+        max-width: 140px;
+    }
+}
+
+.btn-buy-now {
+    background-color: #F7F6F9 !important;
+    color: #0d6efd;
+    border: none;
+    border-radius: 4px;
+    width: 110px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: #{$navbar-lg - 0.02}) {
+    .btn-buy-now {
+        width: 100%;
+        min-width: 92px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: #{$navbar-sm - 0.02}) {
+    .btn-buy-now {
+        min-width: 80px;
+        height: 36px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: $navbar-xs) {
+    .btn-buy-now {
+        height: 32px;
+        font-size: 0.85rem;
+    }
+}

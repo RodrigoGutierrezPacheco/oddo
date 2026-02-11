@@ -1,0 +1,73 @@
+$primary-color: #0087FF;
+$secondary-color: #6c757d;
+$success-color: #198754;
+$font-family-base: 'Montserrat', sans-serif;
+
+@import "./components/navbar";
+
+html {
+    font-family: $font-family-base;
+}
+
+body {
+    font-family: $font-family-base;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.layout-margin {
+    width: 90%;
+}
+
+@media (min-width: 576px) {
+    .layout-margin {
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-margin {
+        width: 70%;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+main.layout-margin {
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    background-color: $primary-color;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.custom-button {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+
+
