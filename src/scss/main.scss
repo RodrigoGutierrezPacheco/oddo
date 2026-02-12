@@ -1,9 +1,16 @@
 @use "sass:color";
 
 $primary-color: #0087FF;
-$secondary-color: #6c757d;
+$secondary-color: #6D7B91;
 $success-color: #198754;
-$font-family-base: 'Montserrat', sans-serif;
+$font-family-base: 'Montserrat', sans-serif; 
+
+$title-color: #0C2456;
+$secondary-title-color: #132A5B;
+
+$secondary-title: 0.7rem;
+$secondary-number: 0.8rem;
+$small-text: 0.6rem;
 
 @use "./components/navbar";
 @use "./components/hero";
@@ -20,18 +27,42 @@ body {
     overflow-x: hidden;
 }
 
-.layout-margin {
+h1, .h1 { font-size: 36px; font-weight: 600; }
+h2, .h2 { font-size: 30px; font-weight: 600; }
+h3, .h3 { font-size: 24px; font-weight: 600; }
+h4, .h4 { font-size: 18px; font-weight: 600; }
+h5, .h5 { font-size: 14px; font-weight: 600; }
+h6, .h6 { font-size: 12px; font-weight: 600; }
+
+h1 small, h1 .small, .h1 small, .h1 .small,
+h2 small, h2 .small, .h2 small, .h2 .small,
+h3 small, h3 .small, .h3 small, .h3 .small,
+h4 small, h4 .small, .h4 small, .h4 .small,
+h5 small, h5 .small, .h5 small, .h5 .small,
+h6 small, h6 .small, .h6 small, .h6 .small {
+    font-weight: inherit;
+    font-size: 0.875em;
+    opacity: 0.75;
+    color: inherit;
+}
+
+h1 small.text-white, h2 small.text-white, h3 small.text-white,
+h4 small.text-white, h5 small.text-white, h6 small.text-white {
+    opacity: 1;
+}
+
+.content-margin {
     width: 90%;
 }
 
 @media (min-width: 576px) {
-    .layout-margin {
+    .content-margin {
         width: 75%;
     }
 }
 
 @media (min-width: 992px) {
-    .layout-margin {
+    .content-margin {
         width: 70%;
     }
 }
@@ -40,11 +71,11 @@ main {
     flex: 1;
 }
 
-main.layout-margin {
+main.content-margin {
     width: 100%;
 }
 
-.main-content {
+.page-main-content {
     flex: 1;
     width: 100%;
     background-color: $primary-color;
@@ -59,7 +90,7 @@ main.layout-margin {
     }
 }
 
-.custom-button {
+.button-primary {
     background-color: $primary-color;
     color: white;
     padding: 0.75rem 1.5rem;
@@ -70,6 +101,28 @@ main.layout-margin {
     &:hover {
         background-color: color.adjust($primary-color, $lightness: -10%);
     }
+}
+
+.heading-dark-color{
+    color: $title-color;
+}
+
+.text-small-label {
+    font-size: $secondary-title;
+}
+
+.text-extra-small-label {
+    font-size: $small-text;
+}
+
+.text-amount {
+    font-size: $secondary-number;
+    color: $secondary-color;
+}
+
+.text-secondary-title {
+    color: $secondary-title-color;
+    font-weight: 600;
 }
 
 

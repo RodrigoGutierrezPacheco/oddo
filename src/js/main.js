@@ -14,6 +14,8 @@ async function loadComponent(containerId, componentPath) {
 document.addEventListener('DOMContentLoaded', async function() {
     await loadComponent('navbar-container', 'components/navbar.html');
     await loadComponent('hero-container', 'components/hero.html');
+    await loadComponent('hero-content-container', 'components/hero-content.html');
+    await loadComponent('manage-cards-container', 'components/manage-cards.html');
 
     console.log('Odoo App cargada correctamente');
 });
